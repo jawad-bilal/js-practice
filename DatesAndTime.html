@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: Dates And Dates</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: blue;  
+        margin-top: 100px;  
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>THIS PAGE IS TO GET DATE AND TIME USING JAVASCRIPT </h1>
+    </div>
+
+
+    <script>
+        console.log("This is a page for Dates and Time in JavaScript");
+        let date = new Date;
+        console.log("Current date and time is: " + date);
+        let dt = new Date(1000);
+        console.log("Current date and time is: " + dt);
+
+
+        // let newDate = new Date("2025-8-18");
+        // console.log("New date is: " + newDate);
+
+        // let newDate = new Date("year, month, day, hours, minutes, seconds, milliseconds");
+ 
+        let newDate = new Date(2025, 6, 22, 16, 57, 30, 0);
+        console.log("New date is: " + newDate);
+
+
+        let yr = newDate.getFullYear();
+        console.log("Year is: " + yr);
+
+        let month = newDate.getMonth();
+        console.log("Year is: " + month);
+
+        let dat = newDate.getDate();
+        console.log("Year is: " + dat);
+
+        let day = newDate.getDay();
+        console.log("Year is: " + day);
+
+    </script>
+</body>
+</html> 
