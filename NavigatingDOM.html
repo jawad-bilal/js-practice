@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another container
+    </div>
+    <script>
+        // Manipulating the DOM using JavaScript
+        // Using getElementById to select an element by its ID
+    let main = document.getElementById("main"); 
+    console.log(main);
+
+    // Using getElementsByClassName to select elements by their class name
+  
+   let containers = document.getElementsByClassName("container");
+    console.log(containers);
+
+
+    // Using querySelector to select the first element that matches the CSS selector
+    console.log("single query selector");
+    let selector = document.querySelector("#nav>li");
+    console.log(selector);
+    // Using querySelectorAll to select all elements that match the CSS selector
+    console.log("multiple query selector");
+    let allContainers = document.querySelectorAll("#nav>li");
+    console.log(allContainers);
+    </script>
+    
+</body>
+</html>
