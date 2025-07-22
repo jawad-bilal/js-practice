@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> scope, if else and switch case</title>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+            <li>item7</li>
+        </ul>
+    </div>
+    <script>
+        // var can be over writed anywhere in the programm
+        var string1 = "This is a string";
+        var string1 = "This is a string 2";
+        console.log(string1);
+        // from now onward...we will use let and const instead of var
+        let a = "jawad";
+        {
+            let a = "bilal";
+            console.log(a);
+        }
+        console.log(a);
+        const b = "this cannot be changed";
+        console.log(b);
+        // b="this cannot be changed 2"; // This will throw an error
+        console.log(b);
+
+        // if else statements
+
+        let age = 34;
+        if (age > 18) {
+            console.log("You are an adult");
+        }
+        else if (age > 12) {
+            console.log("You are a teenager");
+        }
+        else if (age == 18) {
+            console.log("You are an adult now");
+        }
+        else {
+            console.log("You are a child");
+        }
+
+        // switch case
+        const cup = 46;
+        switch (cup) {
+            case 4:
+                console.log("You have 4 cups");
+            case 10:
+                console.log("You have 10 cups");
+                break;
+            case 15:
+                console.log("You have 15 cups");
+                break;
+            case 46:
+                console.log("You have 46 cups");
+                break;
+
+            default: console.log("You have a different number of cups");
+                break;
+        }
+    </script>
+</body>
+
+</html>
