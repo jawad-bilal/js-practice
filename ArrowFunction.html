@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <div class="container">
+        this is arrow function
+    </div>
+
+    <script>
+        function greet() {
+
+            console.log("Hello, World!");
+
+        }
+        greet();
+
+        let great = () => {
+            console.log("Hello, World!");
+        };
+
+        let sum1 = (a, b) => {
+            return a + b;
+        };
+        console.log(sum1(500, 10));
+        let sum = (a, b) => a + b;
+        console.log(sum(5, 10));
+        let half = (a,b) => (a + b) / 2;
+        console.log(half(38789790 , 1000000));
+
+        setTimeout(() => {
+            console.log('we are inside set timeout');
+        }, 3000);
+
+    //   when we create and object and use arrow function inside it, the 'this' keyword refers to the object itself.
+    // if we use 'this' inside the function then the 'this' refers to the its own.
+        let object1 = {
+            greeting: "Good Morning!!",     
+            name: ["John", "Doe", "jawad", "Ali", "Khan", "Ahmed" ],
+            speak(){
+                this.name.forEach((student) => {
+                    console.log(this.greeting + " " + "kukdoo koo brother " + student);
+                });
+
+            }
+        }
+        object1.speak();
+    </script>
+
+</body>
+
+</html>
