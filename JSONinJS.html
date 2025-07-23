@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JSON In JavaScript</title>
+</head>
+<style>
+    .container {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        color: aqua;
+    }
+
+    code {
+        background-color: #333;
+        color: #0f0;
+        padding: 2px 4px;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>
+            This is the page for JSON in JavaScript
+        </h1>
+        <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read
+            and write, and easy for machines to parse and generate.</p>
+        <p>In JavaScript, you can use JSON to store and exchange data. You can convert JavaScript objects to JSON
+            strings using <code>JSON.stringify()</code>, and parse JSON strings back into JavaScript objects using
+            <code>JSON.parse()</code>.</p>
+        <p>For example:</p>
+            <code>
+                let obj = { name: "John", age: 30 };
+                let jsonString = JSON.stringify(obj); // Convert to JSON string
+                console.log(jsonString); // Output: {"name":"John","age":30}
+
+                let parsedObj = JSON.parse(jsonString); // Parse back to JavaScript object
+                console.log(parsedObj.name); // Output: John
+            </code>
+    </div>
+
+
+    <script>
+        let jsonobject = {
+            name: "John",
+            channel: "CodeWithJohn",
+            friend : "Jawad Bilal",
+            food: "Pizza",
+        };
+        console.log(jsonobject);
+
+        // stringify: Is used to convert a javascript object in the string using JSON stringify
+        let myjsonstr = JSON.stringify(jsonobject)
+        console.log(myjsonstr);
+
+        myjsonstr = myjsonstr.replace('John', 'Jawad')
+        myjsonstr = myjsonstr.replace('CodeWithJohn', 'CodeWithJawad')
+
+        console.log(myjsonstr)
+
+        // parse is used to convert a JSON string to javascript object
+        
+        let newjsonobject = JSON.parse(myjsonstr)
+        console.log(newjsonobject)
+
+    </script>
+    
+</body>
+</html>
